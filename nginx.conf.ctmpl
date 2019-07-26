@@ -6,7 +6,7 @@ upstream api-server {
 server {
   listen 80 default_server;
   resolver 172.16.0.23;
-  set \$upstream_endpoint http://app-server;
+  set \$upstream_endpoint http://api-server;
 
   location / {
     proxy_pass \$upstream_endpoint;
